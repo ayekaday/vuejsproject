@@ -9,7 +9,7 @@
   <button @click="showModal = true">open modal</button>
 
   <div v-if="deleteModal">
-    <ModalContent :theme="theme" @close="deleteModal = false">
+    <ModalContent theme="delete" @close="deleteModal = false">
       <h1>Are you delete?</h1>
       <p>Sure?</p>
     </ModalContent>
@@ -28,7 +28,7 @@ export default {
     return {
       header: "Login Success",
       content: "Welcome to my page",
-      theme: "delete",
+      theme: "success",
       showModal: false,
       deleteModal: false,
     };
